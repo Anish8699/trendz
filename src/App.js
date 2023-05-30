@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './categories.style.scss';
+import Directory from './components/Directory/Directory';
+const App = () => {
 
-function App() {
+  const categories = [
+    {
+      id: 1,
+      title: 'Hats'
+    },
+    {
+      id: 2,
+      title: 'Jackets'
+    },
+    {
+      id: 3,
+      title: 'Sneakers'
+    },
+    {
+      id: 4,
+      title: "Men's"
+    },
+    {
+      id: 5,
+      title: "Women's"
+    },
+    {
+      id: 6,
+      title: "Kids"
+    }
+  ]
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Directory categories={categories} />
   );
 }
 
